@@ -13,7 +13,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 
-PORT = 8000
+PORT = int(os.environ.get("PORT", 5000))
 def server_files():
     os.chdir('data')
     Handler = http.server.SimpleHTTPRequestHandler
